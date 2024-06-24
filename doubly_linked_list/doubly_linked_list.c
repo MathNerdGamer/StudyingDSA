@@ -64,7 +64,7 @@ void insert(linked_list_t *list, void *data)
         return;
     }
 
-    ++(list->size);
+    ++list->size;
 
     if( !list->head )
     {
@@ -174,7 +174,7 @@ void *remove_at_head(linked_list_t *list)
     }
 
     free(node);
-    --(list->size);
+    --list->size;
 
     return data;
 }
@@ -200,7 +200,7 @@ void *remove_at_tail(linked_list_t *list)
     }
 
     free(node);
-    --(list->size);
+    --list->size;
 
     return data;
 }
@@ -234,7 +234,7 @@ void *remove_at_index(linked_list_t *list, size_t const index)
     node->prev->next = node->next;
 
     free(node);
-    --(list->size);
+    --list->size;
 
     return data;
 }
@@ -273,7 +273,7 @@ void *remove_by_value(linked_list_t *list, void *data)
     node->next->prev = node->prev;
 
     free(node);
-    --(list->size);
+    --list->size;
 
     return result;
 }
@@ -303,12 +303,7 @@ void clear_list(linked_list_t *list)
 // Utility functions
 void print_list(linked_list_t const *const list, FILE *fp)
 {
-    if( !list || !fp )
-    {
-        return;
-    }
-
-    if( !list->head )
+    if( !list || !list->head || !fp )
     {
         return;
     }
