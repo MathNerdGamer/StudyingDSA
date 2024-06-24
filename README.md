@@ -5,4 +5,4 @@ Learning Data Structures & Algorithms using [this edX course](https://www.edx.or
 ### [Notes](./Notes/README.md)
 
 ### Programs:
-* [Doubly-Linked List](./doubly_linked_list/README.md) -- `make dll` [Note: C version not yet implemented]
+* [Doubly-Linked List](./doubly_linked_list/README.md) -- `make dll`

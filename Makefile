@@ -7,6 +7,6 @@ hello:
 	$(CC) $(CFLAGS) -DTEST hello/hello.c -o $(BIN_DIR)/hello_world
 	$(JAVAC) hello/HelloWorld.java
 
-dll: # C version not yet implemented.
-#	$(CC) $(CFLAGS) doubly_linked_list/main.c doubly_linked_list/doubly_linked_list.c -o $(BIN_DIR)/doubly_linked_list
+dll:
+	$(CC) $(CFLAGS) doubly_linked_list/main.c doubly_linked_list/doubly_linked_list.c -o $(BIN_DIR)/doubly_linked_list
 	$(JAVAC) doubly_linked_list/DoublyLinkedList.java
