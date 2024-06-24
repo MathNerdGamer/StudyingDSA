@@ -52,7 +52,7 @@ void delete_linked_list(linked_list_t **list)
 // Insertion function
 void insert(linked_list_t *list, void *data)
 {
-    if( !list || !data)
+    if( !list || !data )
     {
         return;
     }
@@ -121,7 +121,7 @@ void *access_at_index(linked_list_t const *const list, size_t const index)
 
     node_t *node = list->head;
 
-    for( size_t i = 0; i < index; ++i)
+    for( size_t i = 0; i < index; ++i )
     {
         node = node->next;
     }
@@ -139,12 +139,12 @@ void *access_by_value(linked_list_t const *const list, void *data)
     node_t *node = list->head;
     int cmp_result;
 
-    while( node && (cmp_result = list->comparator(node->data, data)) < 0)
+    while( node && (cmp_result = list->comparator(node->data, data)) < 0 )
     {
         node = node->next;
     }
 
-    if( !node || cmp_result != 0)
+    if( !node || cmp_result != 0 )
     {
         return NULL;
     }
@@ -254,7 +254,7 @@ void *remove_by_value(linked_list_t *list, void *data)
         node = node->next;
     }
 
-    if( !node  || cmp_result != 0 )
+    if( !node || cmp_result != 0 )
     {
         return NULL;
     }
@@ -319,7 +319,7 @@ void print_list(linked_list_t const *const list, FILE *fp)
     {
         list->printer(node->data, fp);
 
-        if( node->next != NULL )
+        if( node->next )
         {
             fprintf(fp, " <-> ");
         }
