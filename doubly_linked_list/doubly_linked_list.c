@@ -119,11 +119,22 @@ void *access_at_index(linked_list_t const *const list, size_t const index)
         return NULL;
     }
 
-    node_t *node = list->head;
+    size_t back_index = list->size - index;
+    node_t *node = (back_index > index) ? list->head : list->tail;
 
-    for( size_t i = 0; i < index; ++i )
+    if( back_index > index )
     {
-        node = node->next;
+        for( size_t i = 0; i < index; ++i )
+        {
+            node = node->next;
+        }
+    }
+    else
+    {
+        for( size_t i = 0; i < back_index; ++i )
+        {
+            node = node->prev;
+        }
     }
 
     return node->data;
@@ -221,11 +232,22 @@ void *remove_at_index(linked_list_t *list, size_t const index)
         return remove_at_tail(list);
     }
 
-    node_t *node = list->head;
+    size_t back_index = list->size - index;
+    node_t *node = (back_index > index) ? list->head : list->tail;
 
-    for( size_t i = 0; i < index; ++i )
+    if( back_index > index )
     {
-        node = node->next;
+        for( size_t i = 0; i < index; ++i )
+        {
+            node = node->next;
+        }
+    }
+    else
+    {
+        for( size_t i = 0; i < back_index; ++i )
+        {
+            node = node->prev;
+        }
     }
 
     void *data = node->data;
