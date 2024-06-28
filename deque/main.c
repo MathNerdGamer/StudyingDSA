@@ -6,9 +6,11 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
     deque_t *deque = CREATE_DEQUE(int);
 
-    for( int i = 0; i < 11; ++i )
+    constexpr int PRIME = 11;
+
+    for( int i = 0; i < PRIME; ++i )
     {
-        int number = (7 * (i + 3)) % 11;
+        int number = (7 * (i + 3)) % PRIME;
         printf("push_back(%d)\n", number);
         push_back(deque, &number);
     }
@@ -38,7 +40,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
     printf("capacity: %zu\n", deque->capacity);
     printf("type size: %zu\n", deque->type_size);
 
-    pop_front(deque);
+    pop_front(deque, NULL);
     printf("\npop_front()\n");
     printf("top(): %d\n", *( int * )top(deque));
     printf("bottom(): %d\n", *( int * )bottom(deque));
@@ -46,13 +48,23 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
     printf("capacity: %zu\n", deque->capacity);
     printf("type size: %zu\n", deque->type_size);
 
-    pop_back(deque);
+    pop_back(deque, NULL);
     printf("\npop_back()\n");
     printf("top(): %d\n", *( int * )top(deque));
     printf("bottom(): %d\n", *( int * )bottom(deque));
     printf("size: %zu\n", deque->size);
     printf("capacity: %zu\n", deque->capacity);
     printf("type size: %zu\n", deque->type_size);
+
+    int result;
+    pop_back(deque, &result);
+    printf("\npop_back() with result\n");
+    printf("top(): %d\n", *( int * )top(deque));
+    printf("bottom(): %d\n", *( int * )bottom(deque));
+    printf("size: %zu\n", deque->size);
+    printf("capacity: %zu\n", deque->capacity);
+    printf("type size: %zu\n", deque->type_size);
+    printf("result of pop_back(): %d\n", result);
 
     delete_deque(&deque);
 }

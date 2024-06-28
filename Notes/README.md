@@ -5,3 +5,5 @@
 * [Recursion](./4.Recursion.md)
 * [Linked Lists](./5.LinkedLists.md)
 * [Stacks & Queues](./6.StacksQueues.md)
+* [Trees](./7.Trees.md)
+* [Tree Traversals](./8.TreeTraversals.md)

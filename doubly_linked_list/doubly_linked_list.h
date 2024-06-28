@@ -1,6 +1,6 @@
 #ifndef MATH_NERD_DOUBLY_LINKED_LIST_H
 #define MATH_NERD_DOUBLY_LINKED_LIST_H
-
+#include <quiet_vscode.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>

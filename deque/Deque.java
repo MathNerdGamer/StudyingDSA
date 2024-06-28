@@ -130,7 +130,7 @@ public class Deque<T> {
 
     public String toString() {
         if (isEmpty()) {
-            return "";
+            return "empty";
         }
 
         StringBuilder result = new StringBuilder();
@@ -138,11 +138,7 @@ public class Deque<T> {
         int i = front;
 
         while (i != back) {
-            if (deque[i] == null) {
-                continue;
-            } else {
-                result.append(deque[i]).append(" ");
-            }
+            result.append(deque[i]).append(" ");
 
             i++;
             i %= capacity;

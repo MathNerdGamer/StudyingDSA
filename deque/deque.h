@@ -1,5 +1,6 @@
 #ifndef MATH_NERD_DEQUE_H
 #define MATH_NERD_DEQUE_H
+#include <quiet_vscode.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,6 +17,8 @@ typedef struct
     size_t front;
     size_t back;
 } deque_t;
+
+typedef unsigned char byte;
 
 // Create a deque.
 deque_t *create_deque(size_t);
@@ -35,13 +38,11 @@ void *top(deque_t *);
 void *bottom(deque_t *);
 
 // Pop functions.
-void *pop_front(deque_t *);
-void *pop_back(deque_t *);
+bool pop_front(deque_t *, void *);
+bool pop_back(deque_t *, void *);
 
 // Clear deque.
 void clear_deque(deque_t **);
-
-void print_deque(deque_t *, void (*print)(void *));
 
 // Deque instantiation
 #define CREATE_DEQUE(t) create_deque(sizeof(t));

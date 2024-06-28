@@ -332,7 +332,7 @@ void print_list(linked_list_t const *const list, FILE *fp)
 
     node_t *node = list->head;
 
-    while( 1 )
+    while( true )
     {
         list->printer(node->data, fp);
 

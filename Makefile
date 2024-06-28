@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS=-Wall -Wextra -Werror -std=c23 -DQUIET_VSCODE
+CFLAGS=-Wall -Wextra -Werror -std=c23 -DQUIET_VSCODE -Iinclude/
 BIN_DIR=bin
 JAVAC=javac
 

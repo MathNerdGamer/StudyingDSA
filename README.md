@@ -6,3 +6,4 @@ Learning Data Structures & Algorithms using [this edX course](https://www.edx.or
 
 ### Programs:
 * [Doubly-Linked List](./doubly_linked_list/README.md) -- `make dll`
+* [Array-based Deque](./deque/README.md) -- `make deq`
