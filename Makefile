@@ -11,6 +11,6 @@ dll:
 	$(CC) $(CFLAGS) doubly_linked_list/main.c doubly_linked_list/doubly_linked_list.c -o $(BIN_DIR)/doubly_linked_list
 	$(JAVAC) doubly_linked_list/DoublyLinkedList.java
 
-deq: # C version not yet implemented.
-#	$(CC) $(CFLAGS) deque/main.c deque/deque.c -o $(BIN_DIR)/deque
+deq:
+	$(CC) $(CFLAGS) deque/main.c deque/deque.c -o $(BIN_DIR)/deque
 	$(JAVAC) deque/Deque.java

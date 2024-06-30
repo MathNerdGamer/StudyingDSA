@@ -24,7 +24,7 @@ typedef unsigned char byte;
 deque_t *create_deque(size_t);
 
 // Rebuild deque.
-void rebuild_deque(deque_t **);
+void rebuild_deque(deque_t *);
 
 // Delete a deque.
 void delete_deque(deque_t **);
@@ -42,9 +42,9 @@ bool pop_front(deque_t *, void *);
 bool pop_back(deque_t *, void *);
 
 // Clear deque.
-void clear_deque(deque_t **);
+void clear_deque(deque_t *);
 
-// Deque instantiation
+// Deque instantiation macro
 #define CREATE_DEQUE(t) create_deque(sizeof(t));
 
 #endif // MATH_NERD_DEQUE_H
