@@ -7,3 +7,5 @@
 * [Stacks & Queues](./6.StacksQueues.md)
 * [Trees](./7.Trees.md)
 * [Tree Traversals](./8.TreeTraversals.md)
+* [BST Operations](./9.BSTOperations.md)
+* [Skip Lists](./10.SkipLists.md)

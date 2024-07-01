@@ -8,6 +8,13 @@
 #define true 1          // `true` and
 #define false 0         // `false` are defined in C23
 
+#ifdef __cplusplus
+// Sometimes VS Code doesn't realize a header is supposed to be C code,
+// so it complains when I use stuff that would be in namespace std (like
+// `std::size_t`)
+using namespace std;
+#endif // __cplusplus
+
 #endif // QUIET_VSCODE
 
 #endif // QUIET_VS_CODE_H

@@ -14,3 +14,7 @@ dll:
 deq:
 	$(CC) $(CFLAGS) deque/main.c deque/deque.c -o $(BIN_DIR)/deque
 	$(JAVAC) deque/Deque.java
+
+bst: # C and Java versions not yet implemented.
+#	$(CC) $(CFLAGS) bst/main.c bst/bst.c -o $(BIN_DIR)/bst
+#	$(JAVAC) bst/BinarySearchTree.java
