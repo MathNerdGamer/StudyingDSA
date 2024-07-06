@@ -1,5 +1,5 @@
-#ifndef MATH_NERD_BST_H
-#define MATH_NERD_BST_H
+#ifndef MATH_NERD_BINARY_SEARCH_TREE_H
+#define MATH_NERD_BINARY_SEARCH_TREE_H
 #include <quiet_vscode.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -21,6 +21,6 @@ typedef struct
     int (*comparator)(void *, void *);
     void (*printer)(void *, void *);
     void (*deleter)(void *);
-} bst_t;
+} binary_search_tree_t;
 
-#endif // MATH_NERD_BST_H
+#endif // MATH_NERD_BINARY_SEARCH_TREE_H
