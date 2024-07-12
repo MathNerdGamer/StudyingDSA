@@ -41,6 +41,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return root == null;
     }
 
+    public int size() {
+        return size;
+    }
+
     public void insert(T data) {
         if (isEmpty()) {
             root = new Node<T>(data);
@@ -289,53 +293,42 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     public static void main(String[] args) {
-        BinarySearchTree<Integer> myBST = new BinarySearchTree<>(5);
-        myBST.insert(2);
-        myBST.insert(7);
-        myBST.insert(-1);
-        myBST.insert(9);
-        myBST.insert(3);
-        myBST.insert(6);
-        myBST.insert(3);
-        myBST.insert(8);
-        myBST.insert(0);
+        BinarySearchTree<Integer> myBST = new BinarySearchTree<>();
 
-        System.out.println(myBST);
-        System.out.println(myBST.preOrder());
-        System.out.println(myBST.postOrder());
-        System.out.println(myBST.levelOrder());
+        for (int i = 0; i < 15; ++i) {
+            myBST.insert((17 * (i + 1) + 3) % 31);
+        }
 
-        myBST.remove(3);
-        System.out.println(myBST);
-        System.out.println(myBST.preOrder());
-        System.out.println(myBST.postOrder());
-        System.out.println(myBST.levelOrder());
-
-        myBST.remove(9);
-        System.out.println(myBST);
-        System.out.println(myBST.preOrder());
-        System.out.println(myBST.postOrder());
-        System.out.println(myBST.levelOrder());
-
-        myBST.remove(-1);
-        System.out.println(myBST);
-        System.out.println(myBST.preOrder());
-        System.out.println(myBST.postOrder());
-        System.out.println(myBST.levelOrder());
-
-        myBST.remove(5);
-        System.out.println(myBST);
-        System.out.println(myBST.preOrder());
-        System.out.println(myBST.postOrder());
-        System.out.println(myBST.levelOrder());
-
-        System.out.println("Contains 19? " + myBST.contains(19));
-        System.out.println("Contains 8? " + myBST.contains(8));
-        System.out.println("Contains 7? " + myBST.contains(7));
-        System.out.println("Contains 5? " + myBST.contains(5));
-
+        System.out.println("Pre-order traversal: " + myBST.preOrder());
+        System.out.println("In-order traversal: " + myBST);
+        System.out.println("Post-order traversal: " + myBST.postOrder());
+        System.out.println("Level-order traversal: " + myBST.levelOrder());
+        System.out.println("Size: " + myBST.size());
         System.out.println("Empty? " + myBST.isEmpty());
+
+        System.out.println("\nContains 7? " + myBST.contains(7));
+        System.out.println("\nContains 11? " + myBST.contains(11));
+
+        System.out.println("\nTesting removal of leaf (18).");
+        myBST.remove(18);
+        System.out.println("Level-order traversal: " + myBST.levelOrder());
+
+        System.out.println("\nTesting removal of node with one child (1).");
+        myBST.remove(1);
+        System.out.println("Level-order traversal: " + myBST.levelOrder());
+
+        System.out.println("\nTesting removal of node with two children (20).");
+        myBST.remove(20);
+        System.out.println("Level-order traversal: " + myBST.levelOrder());
+
+        System.out.println("\nClearing tree. The traversals should be blank below this line.");
         myBST.clear();
+
+        System.out.println("Pre-order traversal: " + myBST.preOrder());
+        System.out.println("In-order traversal: " + myBST);
+        System.out.println("Post-order traversal: " + myBST.postOrder());
+        System.out.println("Level-order traversal: " + myBST.levelOrder());
+        System.out.println("Size: " + myBST.size());
         System.out.println("Empty? " + myBST.isEmpty());
     }
 }
