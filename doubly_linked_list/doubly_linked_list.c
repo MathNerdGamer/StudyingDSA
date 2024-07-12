@@ -7,11 +7,11 @@ node_t *create_node(void *data)
 
     if( !node )
     {
-        return NULL;
+        return nullptr;
     }
 
     node->data = data;
-    node->next = node->prev = NULL;
+    node->next = node->prev = nullptr;
 
     return node;
 }
@@ -25,14 +25,14 @@ linked_list_t *create_linked_list(int (*compare)(void *, void *),
 
     if( !list )
     {
-        return NULL;
+        return nullptr;
     }
 
     list->comparator = compare;
     list->printer = print;
     list->deleter = delete;
     list->size = 0;
-    list->head = list->tail = NULL;
+    list->head = list->tail = nullptr;
 
     return list;
 }
@@ -46,7 +46,7 @@ void delete_linked_list(linked_list_t **list)
 
     clear_list(*list);
     free(*list);
-    *list = NULL;
+    *list = nullptr;
 }
 
 // Insertion function
@@ -104,19 +104,19 @@ void insert(linked_list_t *list, void *data)
 // Access functions
 void *access_at_head(linked_list_t const *const list)
 {
-    return (list->head) ? list->head->data : NULL;
+    return (list->head) ? list->head->data : nullptr;
 }
 
 void *access_at_tail(linked_list_t const *const list)
 {
-    return (list->tail) ? list->tail->data : NULL;
+    return (list->tail) ? list->tail->data : nullptr;
 }
 
 void *access_at_index(linked_list_t const *const list, size_t const index)
 {
     if( !list || index >= list->size )
     {
-        return NULL;
+        return nullptr;
     }
 
     size_t back_index = list->size - index;
@@ -144,7 +144,7 @@ void *access_by_value(linked_list_t const *const list, void *data)
 {
     if( !list || !data )
     {
-        return NULL;
+        return nullptr;
     }
 
     node_t *node = list->head;
@@ -157,7 +157,7 @@ void *access_by_value(linked_list_t const *const list, void *data)
 
     if( !node || cmp_result != 0 )
     {
-        return NULL;
+        return nullptr;
     }
 
     return node->data;
@@ -168,7 +168,7 @@ void *remove_at_head(linked_list_t *list)
 {
     if( !list || !list->head )
     {
-        return NULL;
+        return nullptr;
     }
 
     node_t *node = list->head;
@@ -176,12 +176,12 @@ void *remove_at_head(linked_list_t *list)
 
     if( list->head == list->tail )
     {
-        list->head = list->tail = NULL;
+        list->head = list->tail = nullptr;
     }
     else
     {
         list->head = list->head->next;
-        list->head->prev = NULL;
+        list->head->prev = nullptr;
     }
 
     free(node);
@@ -194,7 +194,7 @@ void *remove_at_tail(linked_list_t *list)
 {
     if( !list || !list->tail )
     {
-        return NULL;
+        return nullptr;
     }
 
     node_t *node = list->tail;
@@ -202,12 +202,12 @@ void *remove_at_tail(linked_list_t *list)
 
     if( list->head == list->tail )
     {
-        list->head = list->tail = NULL;
+        list->head = list->tail = nullptr;
     }
     else
     {
         list->tail = list->tail->prev;
-        list->tail->next = NULL;
+        list->tail->next = nullptr;
     }
 
     free(node);
@@ -220,7 +220,7 @@ void *remove_at_index(linked_list_t *list, size_t const index)
 {
     if( !list || index >= list->size )
     {
-        return NULL;
+        return nullptr;
     }
 
     if( index == 0 )
@@ -265,7 +265,7 @@ void *remove_by_value(linked_list_t *list, void *data)
 {
     if( !list || !data )
     {
-        return NULL;
+        return nullptr;
     }
 
     node_t *node = list->head;
@@ -278,7 +278,7 @@ void *remove_by_value(linked_list_t *list, void *data)
 
     if( !node || cmp_result != 0 )
     {
-        return NULL;
+        return nullptr;
     }
 
     if( node == list->head )
@@ -318,7 +318,7 @@ void clear_list(linked_list_t *list)
         node = next;
     }
 
-    list->head = list->tail = NULL;
+    list->head = list->tail = nullptr;
     list->size = 0;
 }
 

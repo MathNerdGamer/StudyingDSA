@@ -9,3 +9,6 @@
 * [Tree Traversals](./8.TreeTraversals.md)
 * [BST Operations](./9.BSTOperations.md)
 * [Skip Lists & Randomization in Computing](./10.SkipLists.md)
+* [Binary Heaps](./11.BinaryHeaps.md)
+* [Hash Maps](./12.HashMaps.md)
+* [Collision Handling](./13.CollisionHandling.md)

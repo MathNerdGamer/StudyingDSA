@@ -56,7 +56,6 @@ bool contains(linked_list_t const *const, void *);
 size_t get_size(linked_list_t const *const);
 
 // Linked list instantiation macro
-#define CREATE_LINKED_LIST(t)                                                  \
-    create_linked_list(t##_cmp, t##_print, t##_delete);
+#define CREATE_LINKED_LIST(t) create_linked_list(t##_cmp, t##_print, t##_delete)
 
 #endif // MATH_NERD_DOUBLY_LINKED_LIST_H

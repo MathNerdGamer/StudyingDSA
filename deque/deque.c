@@ -53,7 +53,7 @@ void delete_deque(deque_t **deque)
 
     free((*deque)->array);
     free(*deque);
-    *deque = NULL;
+    *deque = nullptr;
 }
 
 void push_front(deque_t *deque, void *data)
@@ -63,7 +63,7 @@ void push_front(deque_t *deque, void *data)
         return;
     }
 
-    if( deque->size == 0 )
+    if( deque->size == 0 && deque->front == deque->back )
     {
         deque->front = 1;
     }
@@ -88,7 +88,7 @@ void push_back(deque_t *deque, void *data)
         return;
     }
 
-    if( deque->size == 0 )
+    if( deque->size == 0 && deque->front == deque->back )
     {
         deque->back = -1;
     }
@@ -110,7 +110,7 @@ void *top(deque_t *deque)
 {
     if( !deque )
     {
-        return NULL;
+        return nullptr;
     }
 
     return ( byte * )deque->array + deque->type_size * deque->front;
@@ -120,7 +120,7 @@ void *bottom(deque_t *deque)
 {
     if( !deque )
     {
-        return NULL;
+        return nullptr;
     }
 
     return ( byte * )deque->array + deque->type_size * deque->back;

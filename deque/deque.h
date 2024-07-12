@@ -45,6 +45,6 @@ bool pop_back(deque_t *, void *);
 void clear_deque(deque_t *);
 
 // Deque instantiation macro
-#define CREATE_DEQUE(t) create_deque(sizeof(t));
+#define CREATE_DEQUE(t) create_deque(sizeof(t))
 
 #endif // MATH_NERD_DEQUE_H
