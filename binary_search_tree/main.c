@@ -88,6 +88,7 @@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose \
 
 int int_cmp(void *data1, void *data2)
 {
+    // We can turn it into a max heap by swapping the order.
     return *( int * )data1 - *( int * )data2;
 }
 
