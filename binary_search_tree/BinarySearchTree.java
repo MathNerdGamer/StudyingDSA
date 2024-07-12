@@ -276,6 +276,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * 
      * if (node == root) {
      * root = null;
+     * // This is actually all that's needed thanks to the garbage collector.
      * } else if (node == node.parent.left) {
      * node.parent.left = null;
      * } else {
