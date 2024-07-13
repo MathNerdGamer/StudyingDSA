@@ -34,7 +34,7 @@ void rebuild_deque(deque_t *deque)
         memcpy(( byte * )new_array +
                    deque->type_size * (deque->size - deque->front),
                deque->array,
-               deque->type_size * deque->back);
+               deque->type_size * deque->front);
     }
 
     free(deque->array);

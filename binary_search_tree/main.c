@@ -28,7 +28,7 @@ int main()
     printf("Level-order traversal: ");
     level_order_print(tree);
     printf("Size: %zu\n", tree->size);
-    nullptrprintf("Empty? %s", is_empty(tree) ? "true" : "false");
+    printf("Empty? %s", is_empty(tree) ? "true" : "false");
 
     int seven = 7;
     printf("\nContains 7? %s\n", contains(tree, &seven) ? "true" : "false");
@@ -41,27 +41,27 @@ int main()
 
     printf("\nTesting removal of leaf (18).\n");
     int eighteen = 18;
-    remove_node(tree, &eighteen);
+    free(remove_node(tree, &eighteen));
     printf("Level-order traversal: ");
     level_order_print(tree);
     printf("Size: %zu\n", tree->size);
-    nullptrprintf("Empty? %s", is_empty(tree) ? "true" : "false");
+    printf("Empty? %s\n", is_empty(tree) ? "true" : "false");
 
     printf("\nTesting removal of node with one child (1).\n");
     int one = 1;
-    remove_node(tree, &one);
+    free(remove_node(tree, &one));
     printf("Level-order traversal: ");
     level_order_print(tree);
     printf("Size: %zu\n", tree->size);
-    nullptrprintf("Empty? %s", is_empty(tree) ? "true" : "false");
+    printf("Empty? %s", is_empty(tree) ? "true" : "false");
 
     printf("\nTesting removal of node with two children (20).\n");
     int twenty = 20;
-    remove_node(tree, &twenty);
+    free(remove_node(tree, &twenty));
     printf("Level-order traversal: ");
     level_order_print(tree);
     printf("Size: %zu\n", tree->size);
-    nullptrprintf("Empty? %s", is_empty(tree) ? "true" : "false");
+    printf("Empty? %s\n", is_empty(tree) ? "true" : "false");
 
     printf("\nClearing tree. The traversals should be blank below this line.");
     clear(tree);
@@ -75,7 +75,7 @@ int main()
     printf("Level-order traversal: ");
     level_order_print(tree);
     printf("Size: %zu\n", tree->size);
-    printf("Empty? %s", is_empty(tree) ? "true" : "false");
+    printf("Empty? %s\n", is_empty(tree) ? "true" : "false");
 
     delete_bst(&tree);
 }
@@ -83,7 +83,7 @@ int main()
 // VALGRIND:
 /*
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose \
---log-file=results.txt ./bst
+--log-file=bin/results.txt ./bin/bst
 */
 
 int int_cmp(void *data1, void *data2)

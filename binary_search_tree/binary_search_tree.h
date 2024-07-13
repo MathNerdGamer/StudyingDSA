@@ -28,9 +28,11 @@ typedef struct
 bst_t *create_bst(int (*comparator)(void *, void *),
                   void (*printer)(void *),
                   void (*deleter)(void *));
-void delete_bst(bst_t **);
 
 node_t *create_node(void *, node_t *);
+
+node_t *find_previous_node(bst_t *, void *);
+node_t *find_node(bst_t *, void *);
 
 void insert_node(bst_t *, void *);
 bool contains(bst_t *, void *);
@@ -59,6 +61,8 @@ void level_order_print(bst_t *);
 void level_order_traverse(bst_t *, void (*func)(void *));
 
 bool is_empty(bst_t *);
+
+void delete_bst(bst_t **);
 
 #define CREATE_BST(t) create_bst(t##_cmp, t##_print, t##_delete)
 

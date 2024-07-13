@@ -15,8 +15,8 @@ deq:
 	$(CC) $(CFLAGS) deque/main.c deque/deque.c -o $(BIN_DIR)/deque
 	$(JAVAC) deque/Deque.java
 
-bst: # C version not yet implemented.
-#	$(CC) $(CFLAGS) -Ideque/ binary_search_tree/main.c \
+bst:
+	$(CC) $(CFLAGS) -Ideque/ binary_search_tree/main.c \
 	                         binary_search_tree/binary_search_tree.c \
 							 deque/deque.c \
 							 -o $(BIN_DIR)/bst
