@@ -207,8 +207,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         StringBuilder result = new StringBuilder();
 
-        result.append(node.data).append(" ").append(inOrderTraverse(node.left))
-                .append(inOrderTraverse(node.right));
+        result.append(node.data).append(" ").append(preOrderTraverse(node.left))
+                .append(preOrderTraverse(node.right));
 
         return result.toString();
     }
@@ -224,8 +224,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         StringBuilder result = new StringBuilder();
 
-        result.append(inOrderTraverse(node.left))
-                .append(inOrderTraverse(node.right)).append(node.data).append(" ");
+        result.append(postOrderTraverse(node.left))
+                .append(postOrderTraverse(node.right)).append(node.data).append(" ");
 
         return result.toString();
     }
@@ -297,6 +297,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         BinarySearchTree<Integer> myBST = new BinarySearchTree<>();
 
         for (int i = 0; i < 15; ++i) {
+            System.out.println("Inserting " + (17 * (i + 1) + 3) % 31);
             myBST.insert((17 * (i + 1) + 3) % 31);
         }
 
