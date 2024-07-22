@@ -12,3 +12,4 @@
 * [Binary Heaps](./11.BinaryHeaps.md)
 * [Hash Maps](./12.HashMaps.md)
 * [Collision Handling](./13.CollisionHandling.md)
+* [AVL Trees](./14.AVLTrees.md)

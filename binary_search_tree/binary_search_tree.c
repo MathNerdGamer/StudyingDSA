@@ -245,20 +245,20 @@ void clear(bst_t *tree)
         return;
     }
 
-    remove_recursive(tree->root, tree->deleter);
+    clear_recursive(tree->root, tree->deleter);
     tree->root = nullptr;
     tree->size = 0;
 }
 
-void remove_recursive(node_t *node, void (*deleter)(void *))
+void clear_recursive(node_t *node, void (*deleter)(void *))
 {
     if( !node )
     {
         return;
     }
 
-    remove_recursive(node->left, deleter);
-    remove_recursive(node->right, deleter);
+    clear_recursive(node->left, deleter);
+    clear_recursive(node->right, deleter);
 
     deleter(node->data);
     free(node);

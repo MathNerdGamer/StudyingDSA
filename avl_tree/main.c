@@ -1,4 +1,4 @@
-#include "binary_search_tree.h"
+#include "avl_tree.h"
 
 // Integer Functions
 int int_cmp(void *, void *);
@@ -9,7 +9,7 @@ void int_print_double(void *);
 int main()
 {
     printf("Creating integer tree.\n");
-    bst_t *tree = CREATE_BST(int);
+    avl_t *tree = CREATE_AVL(int);
 
     for( int i = 0; i < 15; ++i )
     {
@@ -42,14 +42,26 @@ int main()
     printf("\nTesting removal of leaf (18).\n");
     int eighteen = 18;
     free(remove_node(tree, &eighteen));
+    printf("Pre-order traversal: ");
+    pre_order_print(tree);
+    printf("In-order traversal: ");
+    in_order_print(tree);
+    printf("Post-order traversal: ");
+    post_order_print(tree);
     printf("Level-order traversal: ");
     level_order_print(tree);
     printf("Size: %zu\n", tree->size);
     printf("Empty? %s\n", is_empty(tree) ? "true" : "false");
 
-    printf("\nTesting removal of node with one child (1).\n");
-    int one = 1;
-    free(remove_node(tree, &one));
+    printf("\nTesting removal of node with one child (6).\n");
+    int six = 6;
+    free(remove_node(tree, &six));
+    printf("Pre-order traversal: ");
+    pre_order_print(tree);
+    printf("In-order traversal: ");
+    in_order_print(tree);
+    printf("Post-order traversal: ");
+    post_order_print(tree);
     printf("Level-order traversal: ");
     level_order_print(tree);
     printf("Size: %zu\n", tree->size);
@@ -58,6 +70,12 @@ int main()
     printf("\nTesting removal of node with two children (20).\n");
     int twenty = 20;
     free(remove_node(tree, &twenty));
+    printf("Pre-order traversal: ");
+    pre_order_print(tree);
+    printf("In-order traversal: ");
+    in_order_print(tree);
+    printf("Post-order traversal: ");
+    post_order_print(tree);
     printf("Level-order traversal: ");
     level_order_print(tree);
     printf("Size: %zu\n", tree->size);
@@ -77,7 +95,7 @@ int main()
     printf("Size: %zu\n", tree->size);
     printf("Empty? %s\n", is_empty(tree) ? "true" : "false");
 
-    delete_bst(&tree);
+    delete_avl(&tree);
 }
 
 int int_cmp(void *data1, void *data2)

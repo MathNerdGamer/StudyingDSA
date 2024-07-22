@@ -43,7 +43,7 @@ void *remove_one_child(bst_t *, node_t *);
 void *remove_two_child(bst_t *, node_t *);
 
 void clear(bst_t *);
-void remove_recursive(node_t *, void (*deleter)(void *));
+void clear_recursive(node_t *, void (*deleter)(void *));
 
 void pre_order_print(bst_t *);
 void pre_order_traverse(bst_t *, void (*func)(void *));

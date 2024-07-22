@@ -8,3 +8,4 @@ Learning Data Structures & Algorithms using [this edX course](https://www.edx.or
 * [Doubly-Linked List](./doubly_linked_list/README.md) -- `make dll`
 * [Array-based Deque](./deque/README.md) -- `make deq`
 * [Binary Search Tree](./binary_search_tree/README.md) -- `make bst`
+* [AVL Tree](./avl_tree/README.md) -- `make avl`

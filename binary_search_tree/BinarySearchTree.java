@@ -46,6 +46,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     public void insert(T data) {
+        size++;
         if (isEmpty()) {
             root = new Node<T>(data);
             return;
@@ -66,6 +67,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             } else if (comparison > 0) {
                 currentNode = currentNode.right;
             } else {
+                size--;
                 return;
             }
         }
@@ -77,8 +79,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
         } else {
             previousNode.right = newNode;
         }
-
-        size++;
     }
 
     public boolean contains(T data) {

@@ -21,3 +21,10 @@ bst:
 							 deque/deque.c \
 							 -o $(BIN_DIR)/bst
 	$(JAVAC) binary_search_tree/BinarySearchTree.java
+
+avl: # C version not yet implemented.
+	$(CC) $(CFLAGS) -Ideque/ avl_tree/main.c \
+	                         avl_tree/avl_tree.c \
+							 deque/deque.c \
+							 -o $(BIN_DIR)/avl_tree
+	$(JAVAC) avl_tree/AVLTree.java
