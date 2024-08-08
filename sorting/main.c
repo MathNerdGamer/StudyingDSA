@@ -388,7 +388,7 @@ void rename_video(char *file_name, visualizer_t *viz)
         return;
     }
 
-    char output_video_name[32];
+    char output_video_name[64];
     snprintf(output_video_name, sizeof(output_video_name), "%s.mov", file_name);
 
     rename("video.mov", output_video_name);
