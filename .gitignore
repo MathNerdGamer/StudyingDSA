@@ -2,3 +2,5 @@ course-code/
 bin/
 .vscode/
 *.class
+*.ttf
+*.mov

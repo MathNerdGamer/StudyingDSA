@@ -1,5 +1,6 @@
 CC=clang
 CFLAGS=-Wall -Wextra -Werror -std=c23 -DQUIET_VSCODE -Iinclude/
+CFLAGS2=-Wall -Wextra -Werror -Iinclude/
 BIN_DIR=bin
 JAVAC=javac
 
@@ -22,9 +23,20 @@ bst:
 							 -o $(BIN_DIR)/bst
 	$(JAVAC) binary_search_tree/BinarySearchTree.java
 
-avl: # C version not yet implemented.
+avl:
 	$(CC) $(CFLAGS) -Ideque/ avl_tree/main.c \
 	                         avl_tree/avl_tree.c \
 							 deque/deque.c \
 							 -o $(BIN_DIR)/avl_tree
 	$(JAVAC) avl_tree/AVLTree.java
+
+comp:
+	$(CC) $(CFLAGS2) -I/usr/include/SDL2      \
+	                    sorting/max_heap.c    \
+	                    sorting/rendering.c   \
+	    				sorting/sorting.c     \
+						sorting/utility.c     \
+						sorting/main.c        \
+						-lm -lSDL2 -lSDL2_ttf \
+						-o $(BIN_DIR)/comparisons
+# You'll need to provide your own `font.ttf` and have SDL2 installed.

@@ -11,9 +11,15 @@
 using namespace std;
 #else
 
+#include <stdbool.h> // `bool` stuff made standard in C23.
+#ifndef true
+#define true 1
+#endif // true
+#ifndef false
+#define false 0
+#endif // false
+
 #define constexpr const // `constexpr` is defined in C23.
-#define true 1          // `true` and
-#define false 0         // `false` are defined in C23.
 #define nullptr NULL    // `nullptr` is also defined in C23.
 
 #endif // __cplusplus
