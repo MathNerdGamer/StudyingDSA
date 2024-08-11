@@ -20,3 +20,5 @@
 * [Divide & Conquer Sorting Algorithms](./17.DivideAndConquerSorts.md)
 * [Analyses of Divide & Conquer Sorting Algorithms](./18.DivideAndConquerSortAnalyses.md)
 * [Pattern Matching Algorithms I: Boyer-Moore](./19.BoyerMoore.md)
+* [Pattern Matching Algorithms II: Knuth-Morris-Pratt](./20.KnuthMorrisPratt.md)
+* [Pattern Matching Algorithms III: Rabin-Karp](./21.RabinKarp.md)
