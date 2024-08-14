@@ -22,3 +22,5 @@
 * [Pattern Matching Algorithms I: Boyer-Moore](./19.BoyerMoore.md)
 * [Pattern Matching Algorithms II: Knuth-Morris-Pratt](./20.KnuthMorrisPratt.md)
 * [Pattern Matching Algorithms III: Rabin-Karp](./21.RabinKarp.md)
+* [Graphs](./22.Graphs.md)
+* [Depth-First Search](./23.DFS.md)

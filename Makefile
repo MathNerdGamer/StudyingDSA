@@ -40,3 +40,12 @@ comp:
 						-lm -lSDL2 -lSDL2_ttf \
 						-o $(BIN_DIR)/comparisons
 # You'll need to provide your own `font.ttf` and have SDL2 installed.
+
+pattern:
+	$(CC) $(CCFLAGS2) -Iinclude/                       \
+					  pattern_matching/dynamic_array.c \
+					  pattern_matching/bm.c            \
+					  pattern_matching/kmp.c           \
+					  pattern_matching/rk.c            \
+					  pattern_matching/main.c          \
+					  -o $(BIN_DIR)/pattern

@@ -10,3 +10,4 @@ Learning Data Structures & Algorithms using [this edX course](https://www.edx.or
 * [Binary Search Tree](./binary_search_tree/README.md) -- `make bst`
 * [AVL Tree](./avl_tree/README.md) -- `make avl`
 * [Sorting Algorithm Visualizer](./sorting/README.md) -- `make comp` **(Requires SDL and your own `font.ttf`)**
+* [Pattern Matching Algorithms](./pattern_matching/README.md) -- `make pattern`
