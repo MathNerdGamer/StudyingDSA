@@ -24,3 +24,5 @@
 * [Pattern Matching Algorithms III: Rabin-Karp](./21.RabinKarp.md)
 * [Graphs](./22.Graphs.md)
 * [Depth-First Search](./23.DFS.md)
+* [Breadth-First Search](./24.BFS.md)
+* [Dijkstra's Algorithm](./25.Dijkstra.md)
