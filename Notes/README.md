@@ -26,3 +26,5 @@
 * [Depth-First Search](./23.DFS.md)
 * [Breadth-First Search](./24.BFS.md)
 * [Dijkstra's Algorithm](./25.Dijkstra.md)
+* [Prim's Algorithm & The Greedy Paradigm](./26.Prim.md)
+* [Kruskal's Algorithm & Union-Find](./27.Kruskal.md)
