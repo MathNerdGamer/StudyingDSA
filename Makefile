@@ -1,6 +1,6 @@
 CC=clang
-CFLAGS=-Wall -Wextra -Werror -std=c23 -DQUIET_VSCODE -Iinclude/
-CFLAGS2=-Wall -Wextra -Werror -Iinclude/
+CFLAGS=-Wall -Wextra -Werror -std=c23 -DQUIET_VSCODE -Iinclude/ -O3
+CFLAGS2=-Wall -Wextra -Werror -Iinclude/ -O3
 BIN_DIR=bin
 JAVAC=javac
 
@@ -42,10 +42,15 @@ comp:
 # You'll need to provide your own `font.ttf` and have SDL2 installed.
 
 pattern:
-	$(CC) $(CCFLAGS2) -Iinclude/                       \
+	$(CC) $(CCFLAGS) -Iinclude/                        \
 					  pattern_matching/dynamic_array.c \
 					  pattern_matching/bm.c            \
 					  pattern_matching/kmp.c           \
 					  pattern_matching/rk.c            \
 					  pattern_matching/main.c          \
 					  -o $(BIN_DIR)/pattern
+
+dp:
+	$(CC) $(CCFLAGS) dynamic_programming/largest_contiguous_sum.c -o $(BIN_DIR)/largest_contiguous_sum
+	$(CC) $(CCFLAGS) dynamic_programming/LIS.c -o $(BIN_DIR)/LIS
+	$(CC) $(CCFLAGS) dynamic_programming/LCS.c -o $(BIN_DIR)/LCS

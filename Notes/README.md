@@ -28,3 +28,4 @@
 * [Dijkstra's Algorithm](./25.Dijkstra.md)
 * [Prim's Algorithm & The Greedy Paradigm](./26.Prim.md)
 * [Kruskal's Algorithm & Union-Find](./27.Kruskal.md)
+* [Dynamic Programming](./28.DP.md)
