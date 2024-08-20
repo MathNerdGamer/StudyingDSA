@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
     if( argc > 1 )
     {
-        printf("Largest contiguous sum: %d\n", LIS(argc, argv));
+        printf("Largest contiguous sum: %d\n", LIS(argc - 1, argv + 1));
     }
     else
     {
